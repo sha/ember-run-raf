@@ -6,7 +6,6 @@ let hasInitialized = false;
 
 export function initialize(/* container, application */) {
   if (!hasInitialized && !isFastboot()) {
-    globalScope.AnimationFrame.shim();
     setTimeoutOverride();
     hasInitialized = true;
   }
